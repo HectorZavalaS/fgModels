@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8ddaa3f9b8084421a44a4b9dc3b0bf48" Name="Diagram1" >
+        <EntityTypeShape EntityType="siixsem_main_dbModel.siixsem_models_t" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="siixsem_main_dbModel.siixsem_sides_t" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="siixsem_main_dbModel.siixsem_sidesModel_td" Width="1.5" PointX="3" PointY="2" />
+        <AssociationConnector Association="siixsem_main_dbModel.FK_siixsem_sidesModels_td_siixsem_models_t" />
+        <AssociationConnector Association="siixsem_main_dbModel.FK_siixsem_sidesModels_td_siixsem_sides_t" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

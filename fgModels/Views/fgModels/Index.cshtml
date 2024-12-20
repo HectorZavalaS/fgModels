@@ -1,0 +1,75 @@
+﻿@model IEnumerable<fgModels.Models.siixsem_sidesModel_td>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table" id="tblModels" style="width:100%;">
+    <thead>
+        <tr>
+            <th>
+                Model
+            </th>
+            <th>
+                Side
+            </th>
+            <th>
+                FG Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.se_part_num_tr)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.se_int_part_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.se_cust_part_num)
+        </th>*@
+
+            @*<th>
+            @Html.DisplayNameFor(model => model.se_assembly_name)
+        </th>*@
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.siixsem_models_t.se_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.siixsem_sides_t.se_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.se_oracle_par_num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.se_part_num_tr)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.se_int_part_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.se_cust_part_num)
+        </td>*@
+
+            @*<td>
+            @Html.DisplayFor(modelItem => item.se_assembly_name)
+        </td>*@
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.se_id_detail })
+                @*@Html.ActionLink("Details", "Details", new { id = item.se_id_detail }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.se_id_detail })*@
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

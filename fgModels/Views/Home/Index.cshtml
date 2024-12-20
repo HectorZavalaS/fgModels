@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@if (Request.IsAuthenticated)
+{
+    <div class="jumbotron" style="width:60%;margin-left:auto;margin-right:auto;">
+        <div style="width:60%;margin-left:auto;margin-right:auto;">
+            <img src="~/images/logoTrans.png" style="width:25%;" />
+            <label class="header" style="margin-left:20px;">FG Names</label>
+        </div>
+    </div>
+    <div class="window">
+        <div class="window-content">
+            <div  id="fgView">
+        </div>
+    </div>
+
+    </div>
+    @section scripts{
+        <script type="text/javascript">
+            getFgView();
+        </script>
+    }
+}
+else
+{
+    <div id="login">
+
+    </div>
+    @section scripts{
+        <script type="text/javascript">
+            getLogin();
+        </script>
+    }
+}
